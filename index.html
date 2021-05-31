@@ -18,6 +18,7 @@
         margin-bottom: 30px;
         font-size: 20px;
         cursor: pointer;
+        outline: none;
       }
       img {
         width: 100px;
@@ -25,7 +26,7 @@
     </style>
   </head>
   <body>
-    <button>Find a rabbit 🐇</button>
+    <button class="rabbit-btn">Find a rabbit 🐇</button>
     <img src="img/carrot.png" class="carrot" />
     <img src="img/carrot.png" class="carrot" />
     <img src="img/carrot.png" class="carrot" />
@@ -38,6 +39,20 @@
     <img src="img/carrot.png" class="carrot" />
     <img src="img/carrot.png" class="carrot" />
     <img src="img/carrot.png" class="carrot" />
-    <script></script>
+    <img src="img/carrot.png" class="carrot" />
+    <img src="img/carrot.png" class="carrot" />
+    <img src="img/carrot.png" class="carrot" />
+    <img src="img/carrot.png" class="carrot" />
+    <script>
+      const rabbit_btn = document.querySelector(".rabbit-btn");
+      const rabbit = document.querySelector(".rabbit");
+
+      rabbit_btn.addEventListener("click", (event) => {
+        rabbit.scrollIntoView({
+          block: "center",
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>
